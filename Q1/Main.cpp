@@ -12,9 +12,6 @@ int main(int argv, char** argc)
 {
 	bool done = false;
 
-	int updatedTime = 0;
-	int deltaTime = 6000;
-
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 
@@ -81,12 +78,12 @@ int main(int argv, char** argc)
 	SDL_RenderCopy(renderer, bg, nullptr, nullptr);
 	SDL_RenderPresent(renderer);
 
-	SDL_Rect dstrect = { 200, 50, 615, 239 };
-	SDL_RenderCopy(renderer, logo, nullptr, &dstrect);
+	SDL_Rect dstrect1 = { 200, 150, 615, 239 };
+	SDL_RenderCopy(renderer, logo, nullptr, &dstrect1);
 	SDL_RenderPresent(renderer);
 
-	SDL_Rect dstrect = { 500, 400, 172, 57 };
-	SDL_RenderCopy(renderer, playButton, nullptr, &dstrect);
+	SDL_Rect dstrect2 = { 405, 400, 210, 70 };
+	SDL_RenderCopy(renderer, playButton, nullptr, &dstrect2);
 	SDL_RenderPresent(renderer);
 
 	while (!done)
